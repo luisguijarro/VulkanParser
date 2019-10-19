@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{4211E5A2-AC7A-4CFE-9639-5C6578903F46}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VKDeviceMaker.cs">
+    <Files>
+      <File FileName="MainForm.cs" Line="40" Column="5" />
+      <File FileName="VKDelegatorMaker.cs" Line="73" Column="33" />
+      <File FileName="VKxmlParser.cs" Line="54" Column="40" />
+      <File FileName="CreaterMethodsCS3.cs" Line="256" Column="31" />
+      <File FileName="VKDelegatesMaker.cs" Line="89" Column="71" />
+      <File FileName="VKDeviceMaker.cs" Line="271" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VulkanParser" expanded="True">
+            <Node name="VulkanParser" expanded="True">
+              <Node name="objetos" expanded="True" />
+              <Node name="VKDeviceMaker.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.VulkanParser PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
