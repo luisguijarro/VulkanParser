@@ -47,4 +47,3 @@ Z:/VulkanParser/bin/Debug/VulkanParser.pdb
 /home/luisgp82/PROGRAMACION/PROGRAMACION_2019/VulkanParser/obj/Debug/VulkanParser.csproj.GenerateResource.cache
 /home/luisgp82/PROGRAMACION/PROGRAMACION_2019/VulkanParser/obj/Debug/VulkanParser.exe
 /home/luisgp82/PROGRAMACION/PROGRAMACION_2019/VulkanParser/obj/Debug/VulkanParser.pdb
-/home/luisgp82/PROGRAMACION/PROGRAMACION_2019/VulkanParser/obj/Debug/VulkanParser.csprojAssemblyReference.cache
