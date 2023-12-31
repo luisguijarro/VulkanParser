@@ -6,10 +6,10 @@ namespace VulkanParser
 {
     public static partial class Parser
     {
-        public static Dictionary<string, string> BaseTypesList; // name, type
+        public static Dictionary<string, string> BaseTypesList = new Dictionary<string, string>(); // name, type
         public static void ParseBaseTypes(XmlDocument xdoc, bool verbose)
         {
-            BaseTypesList = new Dictionary<string, string>();
+            BaseTypesList.Clear();
             XmlNodeList? xml_baseTypes = xdoc.SelectNodes("/registry/types/type[@category='basetype']");
             if (xml_baseTypes != null)
             {
