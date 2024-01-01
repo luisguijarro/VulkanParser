@@ -10,6 +10,8 @@ namespace VulkanParser
             XmlDocument xdoc = new XmlDocument();
             xdoc.Load(xmlFilePath);
             ParseBaseTypes(xdoc, verbose);
+            ParseBitmaskTypes(xdoc, verbose);
+            ParseDefineTypes(xdoc, verbose);
         }
     }
 }
