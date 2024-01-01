@@ -76,6 +76,7 @@ namespace VulkanParser
                     return; //Finaliza la aplicación
                 }
             }
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Vulkan Parser");
             Console.ForegroundColor = ConsoleColor.Cyan;
