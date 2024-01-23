@@ -1,9 +1,8 @@
-
 namespace VulkanParser
 {
     public static class TypeConversor
     {
-        public static string GetCSharpType(string cType)
+        public static string? GetCSharpType(string? cType)
         {
             switch (cType)
             {
