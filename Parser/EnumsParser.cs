@@ -8,7 +8,7 @@ public static partial class Parser
 {
     #region Constants
     public static Dictionary<string, VkConstant> VkConstants = new Dictionary<string, VkConstant>();
-    public static void ParseConstants(XmlDocument xdoc, bool verbose)
+    public static void ParseConstants(XmlDocument xdoc, bool verbose, bool showErrors)
     {
         VkConstants.Clear();
         if (verbose)
@@ -108,7 +108,7 @@ public static partial class Parser
 
     #region Enumerators
     public static Dictionary<string, Enumerator> Enums = new Dictionary<string, Enumerator>();
-    public static void ParseEnums(XmlDocument xdoc, bool verbose)
+    public static void ParseEnums(XmlDocument xdoc, bool verbose, bool showErrors)
     {
         if (verbose)
         {
@@ -195,7 +195,7 @@ public static partial class Parser
         Console.ResetColor();
     }
 
-    public static void ParseBitmasks(XmlDocument xdoc, bool verbose)
+    public static void ParseBitmasks(XmlDocument xdoc, bool verbose, bool showErrors)
     {
         if (verbose)
         {

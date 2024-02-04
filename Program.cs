@@ -12,6 +12,7 @@ namespace VulkanParser;
 internal sealed class Program
 {
     static bool verbose;
+    static bool showErrors;
     static bool download;
     static bool downloaded;
     static bool gitRefPages;
@@ -39,6 +40,10 @@ internal sealed class Program
                 case "-v":
                 case "-V":
                     verbose = true;
+                    break;
+                case "-e":
+                case "-E":
+                    showErrors = true;
                     break;
                 case "-d":
                 case "-D":
@@ -130,7 +135,7 @@ internal sealed class Program
         }
 
         // TODO: Parsear xml.
-        Parser.Parse("./downloads/vk.xml", verbose);
+        Parser.Parse("./downloads/vk.xml", verbose, showErrors);
 
         Console.ResetColor();
         Console.WriteLine("vk.xml Parsing Finnished!");
@@ -153,6 +158,7 @@ internal sealed class Program
         Console.WriteLine("         If vk.xml file dont exist -d is by default.");
         Console.WriteLine("  -o  -> Output Path of .cs Files. (./output/ by default)");
         Console.WriteLine("  -n  -> NameSpace of .cs Files. (Vulkan by default)");
+        Console.WriteLine("  -e  -> Show Only Errors.");
         //Console.WriteLine("  -g  -> Complete Enums with Vulkan-RefPages. requires git.");
         //Console.WriteLine("  -es -> Parse with OpenGL|ES");
         Console.WriteLine("  -h  -> Show this Help. Ignore another options.");

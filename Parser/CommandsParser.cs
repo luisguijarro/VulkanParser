@@ -6,7 +6,7 @@ namespace VulkanParser;
 public static partial class Parser
 {
     public static Dictionary<string, VkCommand> VkCommands = new Dictionary<string, VkCommand>();
-    public static void ParseCommands(XmlDocument xdoc, bool verbose)
+    public static void ParseCommands(XmlDocument xdoc, bool verbose, bool showErrors)
     {
         VkCommands.Clear();
         if (verbose)

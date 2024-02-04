@@ -9,7 +9,7 @@ public static partial class Parser
 {
     public static Dictionary<string, string> BaseTypesList = new Dictionary<string, string>(); // name, type
 
-    public static void ParseBaseTypes(XmlDocument xdoc, bool verbose)
+    public static void ParseBaseTypes(XmlDocument xdoc, bool verbose, bool showErrors)
     {
 
         if (verbose)
@@ -53,7 +53,7 @@ public static partial class Parser
 
     public static Dictionary<string, string> BitmaskTypesList = new Dictionary<string, string>(); // name, type
 
-    public static void ParseBitmaskTypes(XmlDocument xdoc, bool verbose)
+    public static void ParseBitmaskTypes(XmlDocument xdoc, bool verbose, bool showErrors)
     {
         if (verbose)
         {
@@ -99,7 +99,7 @@ public static partial class Parser
 
     public static Dictionary<string, string> DefineTypesList = new Dictionary<string, string>(); // name, type
 
-    public static void ParseDefineTypes(XmlDocument xdoc, bool verbose)
+    public static void ParseDefineTypes(XmlDocument xdoc, bool verbose, bool showErrors)
     {
         if (verbose)
         {
@@ -135,7 +135,7 @@ public static partial class Parser
                     }
                     else if (nameNode != null)
                     {
-                        if (verbose)
+                        if (verbose || showErrors)
                         {
                             string typeName = nameNode.InnerText;
                             Console.ForegroundColor = ConsoleColor.Red;
