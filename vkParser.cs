@@ -1,4 +1,4 @@
-
+using System;
 using System.Xml;
 
 namespace VulkanParser;
@@ -17,5 +17,6 @@ public static partial class Parser
         ParseBitmasks(xdoc, verbose, showErrors);
         ParseCommands(xdoc, verbose, showErrors);
         ParseFeatures(xdoc, verbose, showErrors);
+
     }
 }

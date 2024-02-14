@@ -1,8 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "omnisharp.useModernNet": true,
+    "dotnet.server.useOmnisharp": false
+  }
 }

@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+
+  <ItemGroup>
+    <!-- Excluye todos los archivos .cs en la carpeta output y todas sus subcarpetas del proceso de compilación -->
+    <Compile Remove="output\**\*.cs" />
+  </ItemGroup>
+
+
 </Project>

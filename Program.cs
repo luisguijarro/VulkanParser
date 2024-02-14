@@ -1,5 +1,4 @@
 ﻿// Creado por Luis Guijarro Pérez.
-
 using System;
 using System.Net;
 using System.ComponentModel;
@@ -18,8 +17,8 @@ internal sealed class Program
     static bool gitRefPages;
     static bool withgles;
     static bool ayuda;
-    static string output;
-    static string s_namespace;
+    static string output = "./output/";
+    static string s_namespace = "Vulkan";
     static int cursortop;
     static bool textoprocesado;
 
@@ -30,8 +29,8 @@ internal sealed class Program
     private static void Main(string[] args)
     {
         Console.Clear();
-        output = "./output/";
-        s_namespace = "Vulkan";
+        // output = "./output/";
+        // s_namespace = "Vulkan";
         for (int i = 0; i < args.Length; i++)
         {
             string arg = args[i];
@@ -136,8 +135,10 @@ internal sealed class Program
 
         // TODO: Parsear xml.
         Parser.Parse("./downloads/vk.xml", verbose, showErrors);
+        CodeWriter.WriteCode(s_namespace, output, verbose);
 
         Console.ResetColor();
+        Console.WriteLine();
         Console.WriteLine("vk.xml Parsing Finnished!");
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("==========================================================");

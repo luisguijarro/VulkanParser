@@ -1,6 +1,8 @@
+using System;
 using System.Xml;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Linq;
 namespace VulkanParser;
 
 public static partial class Parser
@@ -60,7 +62,7 @@ public static partial class Parser
                                     }
                                     if (verbose) { Console.WriteLine($"\t\tCommand: {commandName}"); }
                                 }
-                                Console.WriteLine();
+                                if (verbose) { Console.WriteLine(); }
                             }
                         }
                     }

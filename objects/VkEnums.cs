@@ -1,7 +1,3 @@
-
-
-using System.Reflection.Metadata;
-
 namespace VulkanParser;
 
 public class Enumerator
