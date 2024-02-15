@@ -4,11 +4,11 @@ public class VkCommand
 {
     public List<string> successcodes = new List<string>();
     public List<string> errorcodes = new List<string>();
-    public string returnType;
+    public string? returnType;
     public string CommandName;
     public List<VkCommandParam> VkParams = new List<VkCommandParam>();
 
-    public VkCommand(string CommandName, string returnType)
+    public VkCommand(string CommandName, string? returnType)
     {
         this.CommandName = CommandName;
         this.returnType = returnType;

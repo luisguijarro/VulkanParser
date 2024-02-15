@@ -34,7 +34,6 @@ public static partial class Parser
                         {
                             if (xml_Commands[c] != null)
                             {
-                                // TODO: Parse Proto
                                 XmlNode? proto = xml_Commands[c]?.SelectSingleNode("proto");
                                 string? returnType = proto != null ? xml_Commands[c]?.SelectSingleNode("proto")?.SelectSingleNode("type")?.InnerText : null;
                                 string? commandName = proto != null ? xml_Commands[c]?.SelectSingleNode("proto")?.SelectSingleNode("name")?.InnerText : xml_Commands[c]?.Attributes?["name"]?.Value;

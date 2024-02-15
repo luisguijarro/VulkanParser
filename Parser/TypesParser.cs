@@ -148,7 +148,7 @@ public static partial class Parser
                             {
                                 uint uintValue = 0;
 
-                                if (uint.TryParse(nameNode.NextSibling.InnerText, out uintValue))
+                                if (uint.TryParse(nameNode.NextSibling?.InnerText, out uintValue))
                                 {
                                     DefineTypesList.Add(typeName, new VkDefineType(TypeOfDefType.Constant, typeName, null, uintValue.ToString()));
                                 }
@@ -170,7 +170,7 @@ public static partial class Parser
                             {
                                 string typeType = TypeConversor.GetCSharpType(cTypeNode.InnerXml) ?? "";
 
-                                string vKValue = cTypeNode.NextSibling.InnerText;
+                                string vKValue = cTypeNode.NextSibling?.InnerText ?? "";
 
                                 // Adding VKType to Collection:
                                 DefineTypesList.Add(typeName, new VkDefineType(TypeOfDefType.Constant, typeName, typeType, vKValue));
