@@ -133,14 +133,10 @@ public static partial class Parser
 
                         if (nameNode != null)
                         {
-                            Console.WriteLine();
                             string typeName = nameNode.InnerText;
 
                             string innerText = xml_DefineTypes[i].InnerText;
-                            Console.WriteLine(innerText);
 
-
-                            Console.WriteLine($"DefineType: {typeName}");
                             // Removing #Define:
                             innerText = innerText.Replace("#define ", "");
 
@@ -156,14 +152,13 @@ public static partial class Parser
                                 {
                                     // Separate and Asign type to params
                                     string vkParams = innerText.Split('(')[1].Split(')')[0].Replace(innerText.Split('(')[1].Split(')')[0], "uint " + string.Join(", uint", innerText.Split('(')[1].Split(')')[0].Split(',')));
-                                    Console.WriteLine($"\tParams: {vkParams}");
 
                                     // Separating Values that will be returned by Method / Macro
                                     string vKValue = innerText.Replace(typeName, "").Replace("(" + innerText.Split('(')[1].Split(')')[0] + ")", "");
-                                    Console.WriteLine($"\tvKValue: {vKValue}");
 
                                     // Adding VKType to Collection:
                                     DefineTypesList.Add(typeName, new VkDefineType(TypeOfDefType.Method, typeName, vkParams, vKValue));
+                                    if (verbose) { Console.WriteLine($"\tGetted Type {typeName}"); }
                                 }
                             }
                             else // Can be constants. Some of these can call another Methods / Macros
@@ -175,21 +170,9 @@ public static partial class Parser
                                 // Adding VKType to Collection:
                                 DefineTypesList.Add(typeName, new VkDefineType(TypeOfDefType.Constant, typeName, typeType, vKValue));
 
-                                if (verbose || showErrors) { Console.WriteLine($"\tGetted Type {typeName}, {typeType} {vKValue}"); }
+                                if (verbose) { Console.WriteLine($"\tGetted Type {typeName}"); }
                             }
                         }
-                        /*
-                        else if (nameNode != null)
-                        {
-                            if (verbose || showErrors)
-                            {
-                                string typeName = nameNode.InnerText;
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine($"\t\tType {typeName}");
-                                Console.ResetColor();
-                            }
-                        }
-                        */
                     }
                 }
             }
