@@ -72,7 +72,6 @@ public static partial class CodeWriter
             if (df.typeOfDefType == TypeOfDefType.Constant)
             {
                 string line = $"\tpublic const uint {df.DefineTypeName} = {(df.ArgumentsMethod.Length > 0 ? df.ArgumentsMethod + " " : "")}{df.DefineTypeValue.Split("//")[0].Trim() + ";"}";
-                Console.WriteLine($"{line}");
                 sw.WriteLine(line);
             }
         }
