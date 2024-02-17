@@ -14,5 +14,6 @@ public static partial class CodeWriter
             Directory.CreateDirectory(output);
         }
         writeTypes(output, verbose);
+        WriteConstantsEnums(output, verbose);
     }
 }
