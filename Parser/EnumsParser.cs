@@ -189,10 +189,11 @@ public static partial class Parser
                 //Enumerator enumToAdd = new Enumerator();
             }
         }
-
+        /*
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"Getted {Enums.Count} Enums Type enum.");
         Console.ResetColor();
+        */
     }
 
     public static void ParseBitmasks(XmlDocument xdoc, bool verbose, bool showErrors)
@@ -289,7 +290,7 @@ public static partial class Parser
         }
 
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"Getted {Enums.Count} Enums Type bitmask.");
+        Console.WriteLine($"Getted {Enums.Count} Enums.");
         Console.ResetColor();
     }
 
