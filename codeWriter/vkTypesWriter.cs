@@ -6,7 +6,7 @@ public static partial class CodeWriter
 {
     public static void writeTypes(string output, bool verbose)
     {
-        FileStream fs = new FileStream(output + "/vkTypes.cs", FileMode.Truncate);
+        FileStream fs = new FileStream(output + "/vkTypes.cs", FileMode.Create);
         StreamWriter sw = new StreamWriter(fs);
         sw.WriteLine("using System;");
         sw.WriteLine();
